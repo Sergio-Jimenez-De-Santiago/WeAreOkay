@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*HEADER*/
+
+header {
+    background-color: #252929;
+    white-space: nowrap;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 15vh;
+    margin-right: 2%;
+}
+
+.nav-item {
+    margin: 1%;
+}
+
+.nav-item:hover {
+    transform: translateY(2px);
+
+}
+
+.nav-item:first-child {
+    margin-right: auto;
+    font-style: oblique;
+    /*moves first item in flexbox to very left*/
+}
+
+.logo {
+    width: 12vh;
+    margin-left: 5vw;
+
+}
+
+.nav-link:link {
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3vh;
+}
+
+.nav-link:visited {
+    color: white;
+}
+
+
+.nav-link:hover {
+    color: black;
+}
+
+
+
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+
+main {
+    flex-grow: 1;
+}
+
+
+.recent-video {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2%;
+}
+
+.recent-video img {
+    max-width: 100%;
+    height: auto;
+}
+
+.recent-video div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.contact-socials {
+    display: flex;
+}
+
+.instagram {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 5%;
+
+}
+
+
+.instagram div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: .9;
+}
+
+.instagram img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.imageDiv {
+    position: relative;
+    display: inline-block;
+
+}
+
+.clickMe {
+    background-color: white;
+    color: black;
+    font-size: 1vw;
+    font-weight: bold;
+    position: absolute;
+    font-family: sans-serif;
+    text-decoration: none;
+    top: 0;
+    right: 0;
+    margin: 1%;
+    padding: 2%;
+    display: inline-block;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.clickMe:hover {
+    transform: scale(1.2);
+}
+
+.music {
+    padding: 5%;
+}
+
+
+footer {
+    background-color: #252929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-nav {
+    width: 55vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+
+}
+
+.footer-link,
+.footer-item p {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.footer-item {
+    margin: 2%;
+}
+
+.footer-link:hover {
+    color: black;
+    transform: translateY(2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .nav-link:link {
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 6vh;
+        margin-left: 2vw;
+    }
+
+
+    .footer-link {
+        font-size: 14px;
+    }
+
+    .clickMe {
+        font-size: 12px;
+    }
+
+        .recent-video img{
+            height: auto;
+            width: 100%;
+            aspect-ratio: 16/9;
+
+        }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .nav-link:link {
+        font-size: 12px;
+    }
+
+    .instagram {
+        display: inline;
+    }
+
+}
+
+@media only screen and (max-width: 360px) {
+    .nav-link:link {
+        font-size: 10px;
+    }
+
+
+
+    .footer-link {
+        font-size: 10px;
+    }
+
+    .instagram {
+        display: inline;
+    }
+
+
+
+
+    .logo {
+        width: 10vw;
+        margin-left: 10px;
+    }
+
+
+}
+@media only screen and (min-width: 450px) and (max-width: 500px) {
+    .logo {
+        width: 14vw;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 500px) {
+
+
+
+
+    .instagram {
+        display: inline;
+    }
+
+    .clickMe:active {
+        transform: scale(1.2);
+    }
+}
+
+
+
+@media only screen and (min-width: 501px) and (max-width: 600px) {
+    .nav-link:link {
+        font-size: 16px;
+    }
+
+
+    .clickMe:active {
+        transform: scale(1.2);
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1080px) {
+    .nav-link:link {
+        font-size: 22px;
+    }
+
+
+}

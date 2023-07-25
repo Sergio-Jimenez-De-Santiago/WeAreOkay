@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="shop.css" />
+    <title>WeAreOkay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="index.html"><img class="logo" src="https://i.imgur.com/ZmwmFuE.png" alt="logo"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="lookbook.html">Lookbook</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="socials.html">Socials</a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="announcement-container">
+            <div><img src="https://i.imgur.com/Bw72v45.jpeg" alt=""></div>
+            <div class="announcement"><p>Coming soon</p></div>
+        </div>
+    </main>
+    <footer>
+        <ul class="footer-nav">
+            <li class="footer-item">
+                <a class="footer-link" href="index.html">Home</a>
+            </li>
+            <li class="footer-item">
+                <p>|</p>
+            </li>
+            <li class="footer-item">
+                <a class="footer-link" href="shop.html">Shop</a>
+            </li>
+            <li class="footer-item">
+                <p>|</p>
+            </li>
+            <li class="footer-item">
+                <a class="footer-link" href="about.html">About</a>
+            </li>
+            <li class="footer-item">
+                <p>|</p>
+            </li>
+            <li class="footer-item">
+                <a class="footer-link" href="lookbook.html">Lookbook</a>
+            </li>
+            <li class="footer-item">
+                <p>|</p>
+            </li>
+            <li class="footer-item">
+                <a class="footer-link" href="socials.html">Socials</a>
+            </li>
+        </ul>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        setTimeout(automaticSlides, 2000);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        function automaticSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slideIndex++;
+
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            dots[slideIndex - 1].className += " active";
+
+            setTimeout(automaticSlides, 3000); // Change image every 2 seconds
+        }
+
+    </script>
+</body>
+
+</html>
